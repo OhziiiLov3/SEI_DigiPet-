@@ -23,9 +23,10 @@ align-items: center;
 
 }
 
-.start{
-    
+.start:hover{
+  transform: scale(1.1);
 }
+
 
 h1 {
 padding: 0;
@@ -36,8 +37,13 @@ align-items: center;
  
   
 }
+p{
+  padding: 0 10px;
+  margin: 0 0 15px;  
+}
 
-.dino section {
+
+#dino  {
 padding: 0;
 margin: 0;
 height: 100vh;
@@ -48,7 +54,4 @@ align-items: center;
 }
 
 
-p{
-  padding: 0 10px;
-  margin: 0 0 15px;  
-}
+

@@ -7,7 +7,7 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <!-- FONT AWESOME -->
-    <link rel="stylesheet" href="https://fontawesome.com/icons/egg?style=solid">
+    <!-- <link rel="stylesheet" href="https://fontawesome.com/icons/egg?style=solid"> -->
     <!-- Main CSS -->
     <link rel="stylesheet" href="./styles/main.css">
     <!-- jQuery -->
@@ -18,24 +18,36 @@
 </head>
 
 <body>
+   <main class ="main">
     <header>
         <h1>ZootyMon</h1>
-        <p>Welcome! Press Start to Begin!</p>
-        <button class="start">Start</button>
+        <p>Welcome, Enter Name to Start!</p>
+        <form id="target" class="start" action="#buttons-meter.html">
+            <input id="my-input" type="text">
+            <input type="Submit">
+        </form>
+        
+       
     </header>
 
-    <section class="dino">
-        <img src="file:///Users/Administrator/Downloads/dinoCharactersVersion1.1/gifs/DinoSprites_vita.gif" alt="Picture of Dinosaur" width="100px" height=100px>
-    </section>
+    </main>
 
-<section class="buttons-meter">
-    <i class="fas fa-egg"></i>
+    
+
+<section class="next page">
+
+    <div class="image"> <img src="file:///Users/Administrator/Downloads/dinoCharactersVersion1.1/gifs/DinoSprites_vita.gif" alt="Picture of Dinosaur" width="100px" height=100px>
+    </div>  
+
+<article class="buttons-meter">
     <div class="Hunger"></div>
     <button id="feed">Feed Me</button>
     <div class="Boredom"></div>
     <button id="play">Playtime</button>
     <div class="Sleepy"></div>
     <button id="nap">Naptime</button>
+</article>  
+
 </section>
 
 </body>

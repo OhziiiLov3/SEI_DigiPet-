@@ -47,8 +47,8 @@ console.log("Hello Zootymon!")
   */
 
 /* Step 1 Tamagotchi Stats */
-/*  user will enter name to create a pet
-     A. the pet will have default data
+/*  user will enter name to create a pet √
+     A. the pet will have default data √
      B. you can view the the default data in "bars"
      C. Bars are a visual reference to check pets state
 
@@ -59,9 +59,22 @@ console.log("Hello Zootymon!")
      Boredom - default 5
      Sleepiness- default 5 */
 
+const $divEl = $('<div id="trigger" />');
 const zootyMon = {
     Age: 0,
     Hunger: 5,
     Playtime: 5,
     Sleep: 5,
+    /* Method to start the Game */
+    start(event){
+        console.warn("ZOOTYMON GO!");      
+    },
+    
+   
 }
+   
+
+
+$('.start').on('click',zootyMon.start);
+
+//$('.Hunger').append()
