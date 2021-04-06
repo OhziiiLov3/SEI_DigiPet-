@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  padding: 0 ;
+  margin: 0 ;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(71, 236, 167, 0.719);
+  border-radius: 100%;
+}
+
+header{
+padding: 0 30px;
+margin: 0;
+height: 100vh;
+align-items: center;
+
+
+}
+
+.start{
+    
+}
+
+h1 {
+padding: 0;
+margin: 0 15px;
+display: flex;
+justify-content: center;
+align-items: center;
+ 
+  
+}
+
+.dino section {
+padding: 0;
+margin: 0;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+
+p{
+  padding: 0 10px;
+  margin: 0 0 15px;  
+}

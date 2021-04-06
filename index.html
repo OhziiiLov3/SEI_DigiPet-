@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://fontawesome.com/icons/egg?style=solid">
     <!-- Main CSS -->
     <link rel="stylesheet" href="./styles/main.css">
     <!-- jQuery -->
@@ -16,21 +18,26 @@
 </head>
 
 <body>
-
     <header>
         <h1>ZootyMon</h1>
-        <p>Welcome!</p>
-        <button>Begin</button>
+        <p>Welcome! Press Start to Begin!</p>
+        <button class="start">Start</button>
     </header>
-<section>
-    <i></i>
+
+    <section class="dino">
+        <img src="file:///Users/Administrator/Downloads/dinoCharactersVersion1.1/gifs/DinoSprites_vita.gif" alt="Picture of Dinosaur" width="100px" height=100px>
+    </section>
+
+<section class="buttons-meter">
+    <i class="fas fa-egg"></i>
     <div class="Hunger"></div>
-    <button>Feed Me</button>
+    <button id="feed">Feed Me</button>
     <div class="Boredom"></div>
-    <button>Playtime</button>
+    <button id="play">Playtime</button>
     <div class="Sleepy"></div>
-    <button>Naptime</button>
+    <button id="nap">Naptime</button>
 </section>
+
 </body>
 
 </html>
