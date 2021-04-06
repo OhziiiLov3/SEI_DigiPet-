@@ -51,6 +51,7 @@ console.log("Hello Zootymon!")
      A. the pet will have default data √
      B. you can view the the default data in "bars"
      C. Bars are a visual reference to check pets state
+     D. Enter name to start game
 
     <!-- Tamgotchi Basic Stats  -->
     *Stats help us track Tamagotchi's current state*
@@ -67,7 +68,9 @@ const zootyMon = {
     Sleep: 5,
     /* Method to start the Game */
     start(event){
-        console.warn("ZOOTYMON GO!");      
+        console.warn("ZOOTYMON GO!");
+        $(document).ready($('#my-input'));
+        $('#my-input').append('img.image')  ;
     },
     
    
@@ -75,6 +78,6 @@ const zootyMon = {
    
 
 
-$('.start').on('click',zootyMon.start);
+$('.start').on('click',zootyMon.start).ready('img');
 
 //$('.Hunger').append()
