@@ -89,6 +89,8 @@ const zootyMon = {
        let clear = setInterval(function(){
            i++;
            $('#feedProgBar').attr("value", i* 10);
+          // $('#playProgBar').attr("value", i* 10);
+          // $('#napProgBar').attr("value", i* 10);
            //$('#feedProgBar').width(i+'0%');
         if(i==10){
         clearInterval(clear);
@@ -103,17 +105,17 @@ const zootyMon = {
      C. Hunger meter tells us if our pet is dead or alive
     // Hunger meter- meter to keep track of hungry
      */
-   feedMe(){
-       $('#feedMe').click(function () {
-        let curr_val = $('#progBar').val();
-        let new_val = Number(curr_val) + 1;
-           $('#progBar').val(new_val);
-       });
+   //feedMe(){
+     //  $('#feedMe').click(function () {
+     //   let curr_val = $('#progBar').val();
+      //  let new_val = Number(curr_val) + 1;
+       //    $('#progBar').val(new_val);
+      // });
        
 
    }
 
-   }
+   
    
 $('#feedMe').on('click',zootyMon.feedMe);
 $('.nes-btn').on('click',zootyMon.start);
