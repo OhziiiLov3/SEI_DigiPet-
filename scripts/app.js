@@ -75,8 +75,9 @@ const zootyMon = {
     start(event){
         console.warn("ZOOTYMON GO!");
         $('.firstpage').hide();
-        //$('form #input input:text').prepend($('img')); // come back 
         zootyMon.progressbar();
+        const $name = $('input').val();
+        $('.nameInput').text($name);
     },
     /* Progress bar Count down */
     progressbar(){
