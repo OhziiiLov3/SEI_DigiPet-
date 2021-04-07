@@ -89,8 +89,8 @@ const zootyMon = {
        let clear = setInterval(function(){
            i++;
            $('#feedProgBar').attr("value", i* 10);
-          // $('#playProgBar').attr("value", i* 10);
-          // $('#napProgBar').attr("value", i* 10);
+           $('#playProgBar').attr("value", i* 10);
+           $('#napProgBar').attr("value", i* 10);
            //$('#feedProgBar').width(i+'0%');
         if(i==10){
         clearInterval(clear);
