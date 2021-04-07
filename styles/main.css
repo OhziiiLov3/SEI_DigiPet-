@@ -67,21 +67,16 @@ margin: 0;
 
 
 .Hunger-progressbar{
- width: 200px;
- background-color: #ee4f4ff3;
-}
-.Hunger-puan{
-font-size: 13px;
-color:#494949;
-font-weight: 500;
+padding: 0 20px;
+margin: 0;
+width: 200px;
+height: 30px;
+background-color: #ee4f4ff3;
 }
 .progressFill{
 width: 0%;
 height: 6px;
 background: #15D318;
 }
-.ani-puan{
-display:block;
-height:100%;
-}
+
 
