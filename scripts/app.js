@@ -71,6 +71,7 @@ const zootyMon = {
         console.warn("ZOOTYMON GO!");
         $(document).ready($('#my-input'));
         $('#my-input').append('img.image')  ;
+        $('.firstpage').hide();
     },
     
    
@@ -78,6 +79,6 @@ const zootyMon = {
    
 
 
-$('.start').on('click',zootyMon.start).ready('img');
+$('#submitbutton').on('click',zootyMon.start).ready('img');
 
 //$('.Hunger').append()
