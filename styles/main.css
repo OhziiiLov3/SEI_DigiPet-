@@ -3,8 +3,9 @@
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
-  background-color: rgba(71, 236, 167, 0.719);
+font-family: 'Press Start 2P', cursive;
+font-size: 25px;
+background-color: rgba(71, 236, 167, 0.719);
 
 }
  .firstpage {
@@ -77,9 +78,4 @@ width: 0%;
 height: 6px;
 background: #15D318;
 }
-
-.nes-text is-primary{
-color:  rgba(71, 236, 167, 0.719);
-}
-
 

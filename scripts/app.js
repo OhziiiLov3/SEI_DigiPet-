@@ -76,7 +76,7 @@ const zootyMon = {
         console.warn("ZOOTYMON GO!");
         $('.firstpage').hide();
         //$('form #input input:text').prepend($('img')); // come back 
-       // zootyMon.progressbar();
+        zootyMon.progressbar();
     },
     /* Progress bar Count down */
     progressbar(){
