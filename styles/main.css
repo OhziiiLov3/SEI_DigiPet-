@@ -79,3 +79,29 @@ height: 6px;
 background: #15D318;
 }
 
+.Playtime-progressbar{
+padding: 0 20px;
+margin: 0;
+width: 200px;
+height: 30px;
+background-color: #f1ef5ff3;
+}
+.progressFill{
+width: 0%;
+height: 6px;
+background: #15D318;
+}
+.Naptime-progressbar{
+padding: 0 20px;
+margin: 0;
+width: 200px;
+height: 30px;
+background-color: #f15fd1f3;
+}
+.progressFill{
+width: 0%;
+height: 6px;
+background: #15D318;
+}
+
+
