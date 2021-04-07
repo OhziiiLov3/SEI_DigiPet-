@@ -8,6 +8,8 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Vendor -->
+    <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
     <!-- Main CSS -->
     <link rel="stylesheet" href="./styles/main.css">
     <!-- jQuery -->
@@ -25,12 +27,17 @@
         <p>Welcome, Enter Name to Start!</p>
 
         <img src="file:///Users/Administrator/Downloads/dinoCharactersVersion1.1/gifs/DinoSprites_doux.gif" alt="loading ...">
-
-        <form id="target" class="start" action="#img.html">
-            <input id="input" type="text">
-            <input id="submitbutton"type="submit">
-        </form>  
-        </div>
+    <div class="nes-field">
+    <label for="name_field">Your name</label>
+    <input type="text" id="name_field" class="nes-input">
+    
+    <a class="nes-btn" id="submitbutton" type="submit">Start</a>
+    </div>
+        <!-- <form id="target" class="start" action="#img.html"> -->
+            <!-- <input id="input" type="text"> -->
+            <!-- <input id="submitbutton"type="submit"> -->
+        <!-- </form>   -->
+        <!-- </div> -->
     </header>
 
 
@@ -46,10 +53,9 @@
     <div class="Hunger-progressbar pull-right">
     <div class="progressFill">
     </div>
-
     </div>
-
-    <button class="button">Feed Me</button>
+<button type="button" class="nes-btn is-primary">Feed Me</button>
+<button class="button" id="feed">Feed Me</button>  
     <div class="Boredom"></div>
 
     <button class="button">Playtime</button>

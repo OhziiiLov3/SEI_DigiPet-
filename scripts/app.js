@@ -75,8 +75,8 @@ const zootyMon = {
     start(event){
         console.warn("ZOOTYMON GO!");
         $('.firstpage').hide();
-        $('form #input input:text').prepend($('img')); // come back 
-        zootyMon.progressbar();
+        //$('form #input input:text').prepend($('img')); // come back 
+       // zootyMon.progressbar();
     },
     /* Progress bar Count down */
     progressbar(){
@@ -95,5 +95,5 @@ const zootyMon = {
    
 
 
-$('#submitbutton').on('click',zootyMon.start);
+$('.nes-btn').on('click',zootyMon.start);
 
