@@ -88,8 +88,8 @@ const zootyMon = {
        let i = 0;
        let clear = setInterval(function(){
            i++;
-           $('#feedProgBar').val(i+ '0%');
-           $('#feedProgBar').width(i+'0%');
+           $('#feedProgBar').attr("value", i* 10);
+           //$('#feedProgBar').width(i+'0%');
         if(i==10){
         clearInterval(clear);
         }
@@ -105,7 +105,7 @@ const zootyMon = {
      */
    feedMe(){
        $('#feedMe').click(function () {
-           let curr_val = $('#progBar').val();
+        let curr_val = $('#progBar').val();
         let new_val = Number(curr_val) + 1;
            $('#progBar').val(new_val);
        });
