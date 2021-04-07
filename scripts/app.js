@@ -14,6 +14,10 @@ console.log("Hello Zootymon!")
      Boredom - default 5
      Sleepiness- default 5
 
+    <!-- Progress Bar Count down  -->
+    A. create progress bar for each stat (not age)
+    B. set timer for progress bars 
+    C. move on to enbale buttons 
      <-- Feed Pet -->
      user can feed pet by clicking button
      A. When user clicks feed button it will increase the hunger meter 
@@ -52,6 +56,8 @@ console.log("Hello Zootymon!")
      B. you can view the the default data in "bars"
      C. Bars are a visual reference to check pets state
      D. Enter name to start game
+     E. Have a transition from welcome page to game √
+
 
     <!-- Tamgotchi Basic Stats  -->
     *Stats help us track Tamagotchi's current state*
@@ -60,7 +66,6 @@ console.log("Hello Zootymon!")
      Boredom - default 5
      Sleepiness- default 5 */
 
-const $divEl = $('<div id="trigger" />');
 const zootyMon = {
     Age: 0,
     Hunger: 5,
@@ -69,16 +74,26 @@ const zootyMon = {
     /* Method to start the Game */
     start(event){
         console.warn("ZOOTYMON GO!");
-        $(document).ready($('#my-input'));
-        $('#my-input').append('img.image')  ;
         $('.firstpage').hide();
+        $('form #input input:text').prepend($('img')); // come back 
+        zootyMon.progressbar();
     },
-    
+    /* Progress bar Count down */
+    progressbar(){
+       let i = 0;
+       let clear = setInterval(function(){
+           i++;
+        $('.progressFill').text(i+'0%');
+        $('progessFill').width(i+'0%');
+        if(i==10){
+        clearInterval(clear);
+        }
+       },1000);
+   }
    
 }
    
 
 
-$('#submitbutton').on('click',zootyMon.start).ready('img');
+$('#submitbutton').on('click',zootyMon.start);
 
-//$('.Hunger').append()

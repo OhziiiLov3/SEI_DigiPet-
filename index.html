@@ -7,7 +7,7 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <!-- FONT AWESOME -->
-    <!-- <link rel="stylesheet" href="https://fontawesome.com/icons/egg?style=solid"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <!-- Main CSS -->
     <link rel="stylesheet" href="./styles/main.css">
     <!-- jQuery -->
@@ -25,9 +25,9 @@
 
         <img src="file:///Users/Administrator/Downloads/dinoCharactersVersion1.1/gifs/DinoSprites_doux.gif" alt="loading ...">
 
-        <form id="target" class="start" action="#buttons-meter.html">
+        <form id="target" class="start" action="#img.html">
             <input id="input" type="text">
-            <input id="submitbutton" type="submit">
+            <input id="submitbutton"type="submit">
         </form>  
         </div>
     </header>
@@ -41,12 +41,22 @@
       
 
 <article class="buttons-meter">
-    <div class="Hunger"></div>
-    <button id="feed">Feed Me</button>
+
+    <div class="Hunger-progressbar pull-right">
+    <div class="progressFill">
+    <span class="ani-puan" ani-puan="72"></span>
+    </div>
+
+    </div>
+
+    <button class="button">Feed Me</button>
     <div class="Boredom"></div>
-    <button id="play">Playtime</button>
+
+    <button class="button">Playtime</button>
     <div class="Sleepy"></div>
-    <button id="nap">Naptime</button>
+    
+    <button class="button">Naptime</button>
+
 </article>  
 
 </section>

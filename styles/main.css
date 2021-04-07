@@ -23,33 +23,22 @@ align-items: center;
 
 .title {
 display: flex;
-justify-content: content;
+justify-content: center;
 align-items: center;
 padding: 0 15px;  
 margin: 0;
 }
 
 h1 {
-    padding: 0;
-    margin:0 ;
-    position: absolute;
-    top: 0;
-    right: 0; 
+padding: 0;
+margin:0 ;
+position: absolute;
+top: 0;
+right: 0; 
     
 
 }
 
-/* .firstpage.hidden {
-    animation: fadeOut 1s;
-    animation-fill-mode: forwards;
-} */
-
-/* @keyframes fadeOut{ */
-    /* 100%{ */
-        opacity: 0;
-        visibility: hidden;
-    /* } */
-/* } */
 
 .start:hover{
   transform: scale(1.1);
@@ -60,8 +49,39 @@ h1 {
 .dino  {
 height: 100px;
 margin: 0; 
+display: flex;
+justify-content: center;
+align-items: center;
 border: 5px solid rgb(241, 153, 205);
 border-radius: 100%;
+
 }
 
+.button{
+position: relative;
+top: 50%;
+left: 50%;
+padding: 0 20px;
+margin: 0;
+} 
+
+
+.Hunger-progressbar{
+ width: 200px;
+ background-color: #ee4f4ff3;
+}
+.Hunger-puan{
+font-size: 13px;
+color:#494949;
+font-weight: 500;
+}
+.progressFill{
+width: 0%;
+height: 6px;
+background: #15D318;
+}
+.ani-puan{
+display:block;
+height:100%;
+}
 
