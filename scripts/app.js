@@ -55,7 +55,7 @@ console.log("Hello Zootymon!")
      A. the pet will have default data √
      B. you can view the the default data in "bars"
      C. Bars are a visual reference to check pets state
-     D. Enter name to start game
+     D. Enter name to start game√
      E. Have a transition from welcome page to game √
 
 
@@ -79,7 +79,11 @@ const zootyMon = {
         const $name = $('input').val();
         $('.nameInput').text($name);
     },
-    /* Progress bar Count down */
+    /*  Step 2 Progress bar Count down */
+    // < !--Progress Bar Count down  -->
+   // A.create progress bar for each stat(not age)√
+   // B.set timer for progress bars √
+    //C.move on to enbale buttons
     progressbar(){
        let i = 0;
        let clear = setInterval(function(){
@@ -90,11 +94,26 @@ const zootyMon = {
         clearInterval(clear);
         }
        },1000);
+   },
+   /* Step 3
+   <-- Feed Pet -->
+     user can feed pet by clicking button
+     A. When user clicks feed button it will increase the hunger meter
+     B. if not clicked within the set time (we will set a timer) hunger bar decreases
+     C. Hunger meter tells us if our pet is dead or alive
+    // Hunger meter- meter to keep track of hungry
+     */
+   feed(){
+       let feedMe = setInterval(function changeTimer(){
+        feedMe = $('progressFill') * 2-1;
+       });
+   }
+
    }
    
-}
+
    
 
 
 $('.nes-btn').on('click',zootyMon.start);
-
+$('nes-btn is-primary').on('click',zootyMon.feed);
