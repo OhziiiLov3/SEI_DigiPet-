@@ -82,8 +82,9 @@ const zootyMon = {
         zootyMon.progressbar();
         const $name = $('input').val();
         $('.nameInput').text($name);
+        $('.dino2').hide();
         zootyMon.increaseAge();
-       
+        zootyMon.morph();
     },
    /* Step 3
   <-- Game  -->
@@ -166,6 +167,15 @@ const zootyMon = {
             $('.Age').text(`Age: ${zootyMon.Age}`);
         },1000);
     },
+    morph(){
+      setInterval(function(){
+          if(zootyMon.Playtime >=90){
+            $('.dino2').show();
+            $('.dino').hide();
+          }
+          
+     },1000);  
+    }
  
 }
 

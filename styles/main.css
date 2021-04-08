@@ -110,4 +110,21 @@ align-items: center;
    display: none; 
 }
 
+.dino2{
+display: none; 
+height: 100px;
+margin: 0; 
+display: flex;
+justify-content: center;
+align-items: center; 
+height: 100px;
+margin: 0; 
+display: flex;
+justify-content: center;
+align-items: center;
+border: 5px solid rgb(241, 153, 205);
+border-radius: 100%;
+
+}
+
 
