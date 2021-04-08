@@ -69,9 +69,11 @@ console.log("Hello Zootymon!")
 const zootyMon = {
     Age: 0,
     Hunger: 10,
-    Playtime: 10,
-    Sleep: 10,
+    Playtime: 30,
+    Sleep: 50,
     isFeeding: false,
+    isPlaytime: false,
+    isSleep: false,
 
     /* Method to start the Game */
     start(event){
@@ -93,12 +95,19 @@ const zootyMon = {
             zootyMon.Hunger++;
            if (zootyMon.Hunger <= 0) zootyMon.Hunger =0;
            console.log(zootyMon.Hunger);
-           $('#feedProgBar').attr("value", zootyMon.Hunger* 10);
-           $('#playProgBar').attr("value", zootyMon.Playtime* 10);
-           $('#napProgBar').attr("value", zootyMon.Sleep* 10);
-       // if(this.Hunger <= 0){
-       // clearInterval(clear);
-       // }
+           if (zootyMon.isPlaytime)zootyMon.Playtime--; 
+           else 
+            zootyMon.Playtime++;
+           if (zootyMon.Playtime <= 0) zootyMon.Playtime =0;
+           console.log(zootyMon.Hunger);
+           if (zootyMon.isSleep)zootyMon.Sleep--; 
+           else 
+            zootyMon.Sleep++;
+           if (zootyMon.Sleep <= 0) zootyMon.Sleep =0;
+           console.log(zootyMon.Sleep);
+           $('#feedProgBar').attr("value", zootyMon.Hunger);
+           $('#playProgBar').attr("value", zootyMon.Playtime);
+           $('#napProgBar').attr("value", zootyMon.Sleep);
        },1000);
         
     }
@@ -115,6 +124,8 @@ const zootyMon = {
 
   
    
+$('#play').on('click',function(){zootyMon.isPlaytime = !zootyMon.isPlaytime});
+$('#nap').on('click',function(){zootyMon.isSleep = !zootyMon.isSleep});
 $('#feed').on('click',function(){zootyMon.isFeeding = !zootyMon.isFeeding});
 $('.nes-btn').on('click',zootyMon.start);
 
