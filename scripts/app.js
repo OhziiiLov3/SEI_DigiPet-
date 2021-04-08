@@ -85,7 +85,18 @@ const zootyMon = {
     },
 
     Game() {
-        if ($('#feedProgBar').attr("value") == 0) alert("GAMEOVER!");
+        if ($('#feedProgBar').attr("value") == 0) {
+            alert("You didnt feed your ZootyMon, GAMEOVER!");
+        } else if ($('#feedProgBar').attr("value") == 100)
+        alert("GAMEOVER!");
+        if ($('#playProgBar').attr("value") == 0) {
+            alert("You didnt feed your ZootyMon, GAMEOVER!");
+        } else if ($('#playProgBar').attr("value") == 100)
+        alert("GAMEOVER!");
+        if ($('#napProgBar').attr("value") == 0) {
+            alert("You didnt feed your ZootyMon, GAMEOVER!");
+        } else if ($('#napProgBar').attr("value") == 100)
+        alert("GAMEOVER!");
 
     },
 
