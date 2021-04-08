@@ -68,9 +68,9 @@ console.log("Hello Zootymon!")
 
 const zootyMon = {
     Age: 0,
-    Hunger: 10,
-    Playtime: 30,
-    Sleep: 50,
+    Hunger: 25,
+    Playtime: 50,
+    Sleep: 70,
     isFeeding: false,
     isPlaytime: false,
     isSleep: false,
@@ -87,34 +87,40 @@ const zootyMon = {
     // < !--Progress Bar Count down  -->
    // A.create progress bar for each stat(not age)√
    // B.set timer for progress bars √
-    //C.move on to enbale buttons
+    //C.add click function to add and subtract progress bar with Booleans
+    //D. 
     progressbar(){
        setInterval(function(){
            if (zootyMon.isFeeding)zootyMon.Hunger--; 
            else 
             zootyMon.Hunger++;
            if (zootyMon.Hunger <= 0) zootyMon.Hunger =0;
+           if (zootyMon.Hunger >= 100) zootyMon.Hunger =100;
            console.log(zootyMon.Hunger);
            if (zootyMon.isPlaytime)zootyMon.Playtime--; 
            else 
             zootyMon.Playtime++;
            if (zootyMon.Playtime <= 0) zootyMon.Playtime =0;
+           if (zootyMon.Playtime >= 100) zootyMon.Playtime =100;
            console.log(zootyMon.Hunger);
            if (zootyMon.isSleep)zootyMon.Sleep--; 
            else 
             zootyMon.Sleep++;
            if (zootyMon.Sleep <= 0) zootyMon.Sleep =0;
+           if (zootyMon.Sleep >= 100) zootyMon.Sleep =100;
            console.log(zootyMon.Sleep);
            $('#feedProgBar').attr("value", zootyMon.Hunger);
            $('#playProgBar').attr("value", zootyMon.Playtime);
            $('#napProgBar').attr("value", zootyMon.Sleep);
        },1000);
+
         
     }
+
     /* Step 3
-  <-- Feed Pet -->
-    user can feed pet by clicking button
-    A. When user clicks feed button it will increase the hunger meter
+  <-- Game  -->
+    user can feed,play,or nap with toggle by clicking button
+    A. If the value of the the progress
     B. if not clicked within the set time (we will set a timer) hunger bar increase √
     C. Hunger meter tells us if our pet is dead or alive
    // Hunger meter- meter to keep track of hungry
