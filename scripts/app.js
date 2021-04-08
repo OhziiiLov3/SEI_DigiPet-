@@ -81,22 +81,29 @@ const zootyMon = {
         $('.firstpage').hide();
         zootyMon.progressbar();
         const $name = $('input').val();
-        $('.nameInput').text($name);
+        $('.nameInput').text($name).fadeIn(1000);
+       
     },
-
+   /* Step 3
+  <-- Game  -->
+    user can feed,play,or nap with toggle by clicking button
+    A. If the value of the the progress bar reaches 0 or 100 game will end 
+    B. 
+    
+    */
     Game() {
         if ($('#feedProgBar').attr("value") == 0) {
             alert("You didnt feed your ZootyMon, GAMEOVER!");
         } else if ($('#feedProgBar').attr("value") == 100)
-        alert("GAMEOVER!");
+            alert("You didnt feed your ZootyMon, GAMEOVER!");
         if ($('#playProgBar').attr("value") == 0) {
-            alert("You didnt feed your ZootyMon, GAMEOVER!");
+            alert("Your Zootymon is Bored, GAMEOVER!");
         } else if ($('#playProgBar').attr("value") == 100)
-        alert("GAMEOVER!");
+            alert("Your Zootymon is Bored, GAMEOVER!");
         if ($('#napProgBar').attr("value") == 0) {
-            alert("You didnt feed your ZootyMon, GAMEOVER!");
+            alert("Your Zootymon didnt Sleep, GAMEOVER!");
         } else if ($('#napProgBar').attr("value") == 100)
-        alert("GAMEOVER!");
+            alert("Your Zootymon didnt Sleep, GAMEOVER!");
 
     },
 
@@ -105,7 +112,9 @@ const zootyMon = {
    // A.create progress bar for each stat(not age)√
    // B.set timer for progress bars √
     //C.add click function to add and subtract progress bar with Booleans
-    //D. 
+    
+    
+ 
     progressbar(){
        setInterval(function(){
            if (zootyMon.isFeeding)zootyMon.Hunger--; 
@@ -134,14 +143,7 @@ const zootyMon = {
         
     },
 
-    /* Step 3
-  <-- Game  -->
-    user can feed,play,or nap with toggle by clicking button
-    A. If the value of the the progress bar reaches 0 or 100 game will end 
-    B. 
-    
-    */
-    
+ 
 }
 
   
