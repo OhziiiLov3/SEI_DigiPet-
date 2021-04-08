@@ -82,6 +82,7 @@ const zootyMon = {
         zootyMon.progressbar();
         const $name = $('input').val();
         $('.nameInput').text($name);
+        zootyMon.increaseAge();
        
     },
    /* Step 3
@@ -95,16 +96,31 @@ const zootyMon = {
         if ($('#feedProgBar').attr("value") == 0) {
             $('.dino').hide();
             $('.nes-balloon').css("display", "initial");
-        } else if ($('#feedProgBar').attr("value") == 100)
+            $('.Gameover').css("display", "initial");
+        } else if ($('#feedProgBar').attr("value") == 100){
             $('.dino').hide();
+            $('.nes-balloon').css("display", "initial");
+            $('.Gameover').css("display", "initial");
+        }
         if ($('#playProgBar').attr("value") == 0) {
             $('.dino').hide();
-        } else if ($('#playProgBar').attr("value") == 100)
+            $('.nes-balloon').css("display", "initial");
+            $('.Gameover').css("display", "initial");
+        } else if ($('#playProgBar').attr("value") == 100) {
             $('.dino').hide();
+            $('.nes-balloon').css("display", "initial");
+            $('.Gameover').css("display", "initial");
+        }
         if ($('#napProgBar').attr("value") == 0) {
             $('.dino').hide();
-        } else if ($('#napProgBar').attr("value") == 100)
+            $('.nes-balloon').css("display", "initial");
+            $('.Gameover').css("display", "initial");
+        } else if ($('#napProgBar').attr("value") == 100) {
             $('.dino').hide();
+            $('.nes-balloon').css("display", "initial");
+            $('.Gameover').css("display", "initial");
+        }
+        
 
     },
 
@@ -143,11 +159,13 @@ const zootyMon = {
        },1000);
         
     },
-    progressAge(){
+    /* Step 4 Age */
+    increaseAge(){
         setInterval(function(){
-            if(zootyMon.isFeeding == 50)zootyMon.Age++;
-        });
-    }
+            if(zootyMon.Hunger >= 50)zootyMon.Age++;
+            $('.Age').text(`Age: ${zootyMon.Age}`);
+        },1000);
+    },
  
 }
 
