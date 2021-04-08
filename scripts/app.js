@@ -83,6 +83,12 @@ const zootyMon = {
         const $name = $('input').val();
         $('.nameInput').text($name);
     },
+
+    Game() {
+        if ($('#feedProgBar').attr("value") == 0) alert("GAMEOVER!");
+
+    },
+
     /*  Step 2 Progress bar Count down */
     // < !--Progress Bar Count down  -->
    // A.create progress bar for each stat(not age)√
@@ -112,24 +118,23 @@ const zootyMon = {
            $('#feedProgBar').attr("value", zootyMon.Hunger);
            $('#playProgBar').attr("value", zootyMon.Playtime);
            $('#napProgBar').attr("value", zootyMon.Sleep);
+           zootyMon.Game();
        },1000);
-
         
-    }
+    },
 
     /* Step 3
   <-- Game  -->
     user can feed,play,or nap with toggle by clicking button
-    A. If the value of the the progress
-    B. if not clicked within the set time (we will set a timer) hunger bar increase √
-    C. Hunger meter tells us if our pet is dead or alive
-   // Hunger meter- meter to keep track of hungry
+    A. If the value of the the progress bar reaches 0 or 100 game will end 
+    B. 
+    
     */
-   
+    
 }
 
   
-   
+ 
 $('#play').on('click',function(){zootyMon.isPlaytime = !zootyMon.isPlaytime});
 $('#nap').on('click',function(){zootyMon.isSleep = !zootyMon.isSleep});
 $('#feed').on('click',function(){zootyMon.isFeeding = !zootyMon.isFeeding});
