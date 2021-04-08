@@ -81,7 +81,7 @@ const zootyMon = {
         $('.firstpage').hide();
         zootyMon.progressbar();
         const $name = $('input').val();
-        $('.nameInput').text($name).fadeIn(1000);
+        $('.nameInput').text($name);
        
     },
    /* Step 3
@@ -93,17 +93,18 @@ const zootyMon = {
     */
     Game() {
         if ($('#feedProgBar').attr("value") == 0) {
-            alert("You didnt feed your ZootyMon, GAMEOVER!");
+            $('.dino').hide();
+            $('.nes-balloon').css("display", "initial");
         } else if ($('#feedProgBar').attr("value") == 100)
-            alert("You didnt feed your ZootyMon, GAMEOVER!");
+            $('.dino').hide();
         if ($('#playProgBar').attr("value") == 0) {
-            alert("Your Zootymon is Bored, GAMEOVER!");
+            $('.dino').hide();
         } else if ($('#playProgBar').attr("value") == 100)
-            alert("Your Zootymon is Bored, GAMEOVER!");
+            $('.dino').hide();
         if ($('#napProgBar').attr("value") == 0) {
-            alert("Your Zootymon didnt Sleep, GAMEOVER!");
+            $('.dino').hide();
         } else if ($('#napProgBar').attr("value") == 100)
-            alert("Your Zootymon didnt Sleep, GAMEOVER!");
+            $('.dino').hide();
 
     },
 
@@ -113,7 +114,7 @@ const zootyMon = {
    // B.set timer for progress bars √
     //C.add click function to add and subtract progress bar with Booleans
     
-    
+     
  
     progressbar(){
        setInterval(function(){
@@ -142,7 +143,11 @@ const zootyMon = {
        },1000);
         
     },
-
+    progressAge(){
+        setInterval(function(){
+            if(zootyMon.isFeeding == 50)zootyMon.Age++;
+        });
+    }
  
 }
 
