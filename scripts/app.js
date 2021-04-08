@@ -68,9 +68,11 @@ console.log("Hello Zootymon!")
 
 const zootyMon = {
     Age: 0,
-    Hunger: 5,
-    Playtime: 5,
-    Sleep: 5,
+    Hunger: 10,
+    Playtime: 10,
+    Sleep: 10,
+    isFeeding: false,
+
     /* Method to start the Game */
     start(event){
         console.warn("ZOOTYMON GO!");
@@ -85,38 +87,34 @@ const zootyMon = {
    // B.set timer for progress bars √
     //C.move on to enbale buttons
     progressbar(){
-       let i = 0;
-       let clear = setInterval(function(){
-           i++;
-           $('#feedProgBar').attr("value", i* 10);
-           $('#playProgBar').attr("value", i* 10);
-           $('#napProgBar').attr("value", i* 10);
-           //$('#feedProgBar').width(i+'0%');
-        if(i==10){
-        clearInterval(clear);
-        }
+       setInterval(function(){
+           if (zootyMon.isFeeding)zootyMon.Hunger--; 
+           else 
+            zootyMon.Hunger++;
+           if (zootyMon.Hunger <= 0) zootyMon.Hunger =0;
+           console.log(zootyMon.Hunger);
+           $('#feedProgBar').attr("value", zootyMon.Hunger* 10);
+           $('#playProgBar').attr("value", zootyMon.Playtime* 10);
+           $('#napProgBar').attr("value", zootyMon.Sleep* 10);
+       // if(this.Hunger <= 0){
+       // clearInterval(clear);
+       // }
        },1000);
-   },
-   /* Step 3
-   <-- Feed Pet -->
-     user can feed pet by clicking button
-     A. When user clicks feed button it will increase the hunger meter
-     B. if not clicked within the set time (we will set a timer) hunger bar decreases
-     C. Hunger meter tells us if our pet is dead or alive
-    // Hunger meter- meter to keep track of hungry
-     */
-   //feedMe(){
-     //  $('#feedMe').click(function () {
-     //   let curr_val = $('#progBar').val();
-      //  let new_val = Number(curr_val) + 1;
-       //    $('#progBar').val(new_val);
-      // });
-       
-
-   }
-
+        
+    }
+    /* Step 3
+  <-- Feed Pet -->
+    user can feed pet by clicking button
+    A. When user clicks feed button it will increase the hunger meter
+    B. if not clicked within the set time (we will set a timer) hunger bar increase √
+    C. Hunger meter tells us if our pet is dead or alive
+   // Hunger meter- meter to keep track of hungry
+    */
    
+}
+
+  
    
-$('#feedMe').on('click',zootyMon.feedMe);
+$('#feed').on('click',function(){zootyMon.isFeeding = !zootyMon.isFeeding});
 $('.nes-btn').on('click',zootyMon.start);
 
