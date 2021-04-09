@@ -173,13 +173,12 @@ const zootyMon = {
         setInterval(function(){
             if(zootyMon.Hunger >= 25)zootyMon.Age++;
             if(zootyMon.Age <= 0)zootyMon.Age =0;
-            if(zootyMon.Age >= 100)zootyMon.Age =100;
+            if(zootyMon.Age >= 100)zootyMon.Age =101;
+            if(zootyMon.Age >= 101)alert("You Win,Gameover !"); // fix clear alert 
             $('.Age').text(`Age: ${zootyMon.Age}`);
-           // if(zootyMon.Age = 101)alert("You Win,Gameover !");
+           
     },1000);
-        //if (zootyMon.Hunger === $('#napProgBar').attr("value") == 100){
-            //return alert("Gameover");
-       // }
+       zootyMon.Age.clear();
     },
     /* Step 5 Morph */
     // A. Morph Zootymon when value is equal to 50
