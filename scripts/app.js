@@ -82,9 +82,10 @@ const zootyMon = {
         zootyMon.progressbar();
         const $name = $('input').val();
         $('.nameInput').text($name);
-        $('.dino2').hide();
         zootyMon.increaseAge();
         zootyMon.morph();
+        $('.dino2').hide();
+        
     },
    /* Step 3
   <-- Game  -->
@@ -96,28 +97,34 @@ const zootyMon = {
     Game() {
         if ($('#feedProgBar').attr("value") == 0) {
             $('.dino').hide();
+            $('.dino2').hide();
             $('.nes-balloon').css("display", "initial");
             $('.Gameover').css("display", "initial");
         } else if ($('#feedProgBar').attr("value") == 100){
             $('.dino').hide();
+            $('.dino2').hide();
             $('.nes-balloon').css("display", "initial");
             $('.Gameover').css("display", "initial");
         }
         if ($('#playProgBar').attr("value") == 0) {
             $('.dino').hide();
+            $('.dino2').hide();
             $('.nes-balloon').css("display", "initial");
             $('.Gameover').css("display", "initial");
         } else if ($('#playProgBar').attr("value") == 100) {
             $('.dino').hide();
+            $('.dino2').hide();
             $('.nes-balloon').css("display", "initial");
             $('.Gameover').css("display", "initial");
         }
         if ($('#napProgBar').attr("value") == 0) {
             $('.dino').hide();
+            $('.dino2').hide();
             $('.nes-balloon').css("display", "initial");
             $('.Gameover').css("display", "initial");
         } else if ($('#napProgBar').attr("value") == 100) {
             $('.dino').hide();
+            $('.dino2').hide();
             $('.nes-balloon').css("display", "initial");
             $('.Gameover').css("display", "initial");
         }
@@ -163,13 +170,14 @@ const zootyMon = {
     /* Step 4 Age */
     increaseAge(){
         setInterval(function(){
-            if(zootyMon.Hunger >= 50)zootyMon.Age++;
+            if(zootyMon.Hunger >= 25)zootyMon.Age++;
             $('.Age').text(`Age: ${zootyMon.Age}`);
         },1000);
     },
+    /* Step 5 Morph */
     morph(){
       setInterval(function(){
-          if(zootyMon.Playtime >=90){
+          if(zootyMon.Age >=50){
             $('.dino2').show();
             $('.dino').hide();
           }
