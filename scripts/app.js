@@ -85,6 +85,7 @@ const zootyMon = {
         $('.nameInput').text($name);
         zootyMon.increaseAge();
         zootyMon.morph();
+       zootyMon.animateZootymon();
        
         
     },
@@ -147,19 +148,19 @@ const zootyMon = {
             zootyMon.Hunger++;
            if (zootyMon.Hunger <= 0) zootyMon.Hunger =0;
            if (zootyMon.Hunger >= 100) zootyMon.Hunger =100;
-           console.log(zootyMon.Hunger);
+           //console.log(zootyMon.Hunger);
            if (zootyMon.isPlaytime)zootyMon.Playtime--; 
            else 
             zootyMon.Playtime++;
            if (zootyMon.Playtime <= 0) zootyMon.Playtime =0;
            if (zootyMon.Playtime >= 100) zootyMon.Playtime =100;
-           console.log(zootyMon.Hunger);
+           //console.log(zootyMon.Hunger);
            if (zootyMon.isSleep)zootyMon.Sleep--; 
            else 
             zootyMon.Sleep++;
            if (zootyMon.Sleep <= 0) zootyMon.Sleep =0;
            if (zootyMon.Sleep >= 100) zootyMon.Sleep =100;
-           console.log(zootyMon.Sleep);
+           //console.log(zootyMon.Sleep);
            $('#feedProgBar').attr("value", zootyMon.Hunger);
            $('#playProgBar').attr("value", zootyMon.Playtime);
            $('#napProgBar').attr("value", zootyMon.Sleep);
@@ -171,6 +172,8 @@ const zootyMon = {
     increaseAge(){
         setInterval(function(){
             if(zootyMon.Hunger >= 25)zootyMon.Age++;
+            if(zootyMon.Age <= 0)zootyMon.Age =0;
+            if(zootyMon.Age >= 100)zootyMon.Age =100;
             $('.Age').text(`Age: ${zootyMon.Age}`);
     },1000);
         //if (zootyMon.Hunger === $('#napProgBar').attr("value") == 100){
@@ -184,15 +187,39 @@ const zootyMon = {
           if(zootyMon.Age >=50){
             $('.dino2').show();
             $('.dino').hide();
-          } 
-          
+          }   
      },1000);  
     },
-    
+    animateZootymon() {
+        let width = 500;
+        console.log("run");
+        function goRight() {
+            $(".dino").animate({
+                left: 400
+            }, 5000, function () {
+                setTimeout(goLeft, 50);
+            }).css({
+                transform: "scaleX(1)"
+            })
+                ;
+        }
+        function goLeft() {
+            $(".dino").animate({
+                left: -300
+            }, 5000, function () {
+                setTimeout(goRight, 50);
+            }).css({
+                transform: "scaleX(-1)"
+            })
+                ;
+        }
+        setTimeout(goRight, 50);
+    },
+
 }
 
-  
-
+$('.animate').on('click',zootyMon.animateZootymon); 
+//$('.animate').on('click',function(){$('.dino').addClass('box-animate') })
 $('#play').on('click',function(){zootyMon.isPlaytime = !zootyMon.isPlaytime});
 $('#nap').on('click',function(){zootyMon.isSleep = !zootyMon.isSleep});
 $('#feed').on('click',function(){zootyMon.isFeeding = !zootyMon.isFeeding});

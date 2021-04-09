@@ -117,11 +117,6 @@ height: 100px;
 margin: 0; 
 display: flex;
 justify-content: center;
-align-items: center; 
-height: 100px;
-margin: 0; 
-display: flex;
-justify-content: center;
 align-items: center;
 border: 5px solid rgb(241, 153, 205);
 border-radius: 100%;
@@ -129,7 +124,27 @@ border-radius: 100%;
 }
 
 .nameInput{
-position: sticky;
+/* position: sticky; */
 color: rgba(235, 135, 235, 0.925);
 }
 
+.list{
+position: sticky ;
+
+}
+.nes-container{
+position: sticky;
+
+}
+.box-animate{
+    animation: rotate 1s linear;
+}
+
+@keyframes rotate{
+0% {
+    transform:  rotate(0);
+} 
+100%{
+    transform: rotate(360);
+    }  
+}
