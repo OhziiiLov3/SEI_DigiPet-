@@ -175,6 +175,7 @@ const zootyMon = {
             if(zootyMon.Age <= 0)zootyMon.Age =0;
             if(zootyMon.Age >= 100)zootyMon.Age =100;
             $('.Age').text(`Age: ${zootyMon.Age}`);
+           // if(zootyMon.Age = 101)alert("You Win,Gameover !");
     },1000);
         //if (zootyMon.Hunger === $('#napProgBar').attr("value") == 100){
             //return alert("Gameover");
@@ -189,6 +190,12 @@ const zootyMon = {
             $('.dino').hide();
           }   
      },1000);  
+    },
+    naptime(){
+        setTimeout(function(){
+            if(zootyMon.Sleep <= 20)alert("Your ZootyMon is Sleeping");
+        },1000);
+       clearTimeout(zootyMon.Sleep);
     },
     animateZootymon() {
         let width = 500;
@@ -215,7 +222,6 @@ const zootyMon = {
         }
         setTimeout(goRight, 50);
     },
-
 }
 
 $('.animate').on('click',zootyMon.animateZootymon); 
@@ -224,4 +230,5 @@ $('#play').on('click',function(){zootyMon.isPlaytime = !zootyMon.isPlaytime});
 $('#nap').on('click',function(){zootyMon.isSleep = !zootyMon.isSleep});
 $('#feed').on('click',function(){zootyMon.isFeeding = !zootyMon.isFeeding});
 $('.nes-btn').on('click',zootyMon.start);
+$('#zooty').on('click',zootyMon.start);
 
