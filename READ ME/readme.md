@@ -38,3 +38,6 @@ You pet should die if Hunger, Boredom, or Sleepiness hits 10. √
 Morph your pet at certain ages. √
 Animate your pet across the screen while it's alive. n/a 
 
+![Screen Shot 2021-04-09 at 9 40 08 AM](https://media.git.generalassemb.ly/user/35030/files/97805680-9917-11eb-8814-447695e52add)
+![Screen Shot 2021-04-09 at 9 41 17 AM](https://media.git.generalassemb.ly/user/35030/files/c5fe3180-9917-11eb-8e65-380f2d4b7bf4)
+![Screen Shot 2021-04-09 at 9 42 02 AM](https://media.git.generalassemb.ly/user/35030/files/de6e4c00-9917-11eb-8b1c-5ce9ab63ffa6)
