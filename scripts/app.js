@@ -223,8 +223,8 @@ const zootyMon = {
     },
 }
 
-$('.animate').on('click',zootyMon.animateZootymon); 
-//$('.animate').on('click',function(){$('.dino').addClass('box-animate') })
+//$('.animate').on('click',zootyMon.animateZootymon); 
+$('.animate').on('click',function(){$('.dino').addClass('box-animate').css("position","relative") })
 $('#play').on('click',function(){zootyMon.isPlaytime = !zootyMon.isPlaytime});
 $('#nap').on('click',function(){zootyMon.isSleep = !zootyMon.isSleep});
 $('#feed').on('click',function(){zootyMon.isFeeding = !zootyMon.isFeeding});

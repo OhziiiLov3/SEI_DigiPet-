@@ -48,6 +48,7 @@ right: 0;
 
 
 .dino  {
+position: relative;
 height: 100px;
 margin: 0; 
 display: flex;
@@ -138,6 +139,7 @@ position: sticky;
 
 }
 .box-animate{
+    position: relative; 
     animation: rotate 1s linear;
 }
 
