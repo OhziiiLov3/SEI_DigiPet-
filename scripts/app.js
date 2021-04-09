@@ -79,12 +79,13 @@ const zootyMon = {
     start(event){
         console.warn("ZOOTYMON GO!");
         $('.firstpage').hide();
+        $('.dino2').hide();
         zootyMon.progressbar();
         const $name = $('input').val();
         $('.nameInput').text($name);
         zootyMon.increaseAge();
         zootyMon.morph();
-        $('.dino2').hide();
+       
         
     },
    /* Step 3
@@ -97,36 +98,37 @@ const zootyMon = {
     Game() {
         if ($('#feedProgBar').attr("value") == 0) {
             $('.dino').hide();
-            $('.dino2').hide();
+            $('.dino2').remove();
             $('.nes-balloon').css("display", "initial");
             $('.Gameover').css("display", "initial");
         } else if ($('#feedProgBar').attr("value") == 100){
             $('.dino').hide();
-            $('.dino2').hide();
+            $('.dino2').remove();
             $('.nes-balloon').css("display", "initial");
             $('.Gameover').css("display", "initial");
         }
         if ($('#playProgBar').attr("value") == 0) {
             $('.dino').hide();
-            $('.dino2').hide();
+            $('.dino2').remove();
             $('.nes-balloon').css("display", "initial");
             $('.Gameover').css("display", "initial");
         } else if ($('#playProgBar').attr("value") == 100) {
             $('.dino').hide();
-            $('.dino2').hide();
+            $('.dino2').remove();
             $('.nes-balloon').css("display", "initial");
             $('.Gameover').css("display", "initial");
         }
         if ($('#napProgBar').attr("value") == 0) {
             $('.dino').hide();
-            $('.dino2').hide();
+            $('.dino2').remove();
             $('.nes-balloon').css("display", "initial");
             $('.Gameover').css("display", "initial");
         } else if ($('#napProgBar').attr("value") == 100) {
             $('.dino').hide();
-            $('.dino2').hide();
+            $('.dino2').remove();
             $('.nes-balloon').css("display", "initial");
             $('.Gameover').css("display", "initial");
+            //zootyMon.naptime();
         }
         
 
@@ -137,8 +139,6 @@ const zootyMon = {
    // A.create progress bar for each stat(not age)√
    // B.set timer for progress bars √
     //C.add click function to add and subtract progress bar with Booleans
-    
-     
  
     progressbar(){
        setInterval(function(){
@@ -172,23 +172,27 @@ const zootyMon = {
         setInterval(function(){
             if(zootyMon.Hunger >= 25)zootyMon.Age++;
             $('.Age').text(`Age: ${zootyMon.Age}`);
-        },1000);
+    },1000);
+        //if (zootyMon.Hunger === $('#napProgBar').attr("value") == 100){
+            //return alert("Gameover");
+       // }
     },
     /* Step 5 Morph */
+    // A. Morph Zootymon when value is equal to 50
     morph(){
       setInterval(function(){
           if(zootyMon.Age >=50){
             $('.dino2').show();
             $('.dino').hide();
-          }
+          } 
           
      },1000);  
-    }
- 
+    },
+    
 }
 
   
- 
+
 $('#play').on('click',function(){zootyMon.isPlaytime = !zootyMon.isPlaytime});
 $('#nap').on('click',function(){zootyMon.isSleep = !zootyMon.isSleep});
 $('#feed').on('click',function(){zootyMon.isFeeding = !zootyMon.isFeeding});
